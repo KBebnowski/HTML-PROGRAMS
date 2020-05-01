@@ -1,0 +1,166 @@
+<html>
+
+<head> 
+<script>
+var jeden=0, dwa;
+
+function ukryj()
+{
+a1.innerHTML="<img src='blad.jpg'>";
+a2.innerHTML="<img src='blad.jpg'>";
+a3.innerHTML="<img src='blad.jpg'>";
+a4.innerHTML="<img src='blad.jpg'>";
+a5.innerHTML="<img src='blad.jpg'>";
+a6.innerHTML="<img src='blad.jpg'>";
+a7.innerHTML="<img src='blad.jpg'>";
+a8.innerHTML="<img src='blad.jpg'>";
+a9.innerHTML="<img src='blad.jpg'>";
+a10.innerHTML="<img src='blad.jpg'>";
+a11.innerHTML="<img src='blad.jpg'>";
+a12.innerHTML="<img src='blad.jpg'>";
+a13.innerHTML="<img src='blad.jpg'>";
+a14.innerHTML="<img src='blad.jpg'>";
+a15.innerHTML="<img src='blad.jpg'>";
+a16.innerHTML="<img src='blad.jpg'>";
+a17.innerHTML="<img src='blad.jpg'>";
+a18.innerHTML="<img src='blad.jpg'>";
+a19.innerHTML="<img src='blad.jpg'>";
+a20.innerHTML="<img src='blad.jpg'>";
+}
+function Odkryj(x)
+{
+if(jeden==0)
+{
+ukryj();
+if(x==a1) x.innerHTML="<img src='obraz1.jpg'>"
+if(x==a2) x.innerHTML="<img src='obraz2.jpg'>"
+if(x==a3) x.innerHTML="<img src='obraz3.jpg'>"
+if(x==a4) x.innerHTML="<img src='obraz4.jpg'>"
+if(x==a5) x.innerHTML="<img src='obraz5.jpg'>"
+if(x==a6) x.innerHTML="<img src='obraz6.jpg'>"
+if(x==a7) x.innerHTML="<img src='obraz7.jpg'>"
+if(x==a8) x.innerHTML="<img src='obraz8.jpg'>"
+if(x==a9) x.innerHTML="<img src='obraz9.jpg'>"
+if(x==a10) x.innerHTML="<img src='obraz10.jpg'>"
+if(x==a11) x.innerHTML="<img src='obraz1.jpg'>"
+if(x==a12) x.innerHTML="<img src='obraz2.jpg'>"
+if(x==a13) x.innerHTML="<img src='obraz3.jpg'>"
+if(x==a14) x.innerHTML="<img src='obraz4.jpg'>"
+if(x==a15) x.innerHTML="<img src='obraz5.jpg'>"
+if(x==a16) x.innerHTML="<img src='obraz6.jpg'>"
+if(x==a17) x.innerHTML="<img src='obraz7.jpg'>"
+if(x==a18) x.innerHTML="<img src='obraz8.jpg'>"
+if(x==a19) x.innerHTML="<img src='obraz9.jpg'>"
+if(x==a20) x.innerHTML="<img src='obraz10.jpg'>"
+jeden=x;
+}
+else
+{
+dwa=x;
+if(x==a1) x.innerHTML="<img src='obraz1.jpg'>"
+if(x==a2) x.innerHTML="<img src='obraz2.jpg'>"
+if(x==a3) x.innerHTML="<img src='obraz3.jpg'>"
+if(x==a4) x.innerHTML="<img src='obraz4.jpg'>"
+if(x==a5) x.innerHTML="<img src='obraz5.jpg'>"
+if(x==a6) x.innerHTML="<img src='obraz6.jpg'>"
+if(x==a7) x.innerHTML="<img src='obraz7.jpg'>"
+if(x==a8) x.innerHTML="<img src='obraz8.jpg'>"
+if(x==a9) x.innerHTML="<img src='obraz9.jpg'>"
+if(x==a10) x.innerHTML="<img src='obraz10.jpg'>"
+if(x==a11) x.innerHTML="<img src='obraz1.jpg'>"
+if(x==a12) x.innerHTML="<img src='obraz2.jpg'>"
+if(x==a13) x.innerHTML="<img src='obraz3.jpg'>"
+if(x==a14) x.innerHTML="<img src='obraz4.jpg'>"
+if(x==a15) x.innerHTML="<img src='obraz5.jpg'>"
+if(x==a16) x.innerHTML="<img src='obraz6.jpg'>"
+if(x==a17) x.innerHTML="<img src='obraz7.jpg'>"
+if(x==a18) x.innerHTML="<img src='obraz8.jpg'>"
+if(x==a19) x.innerHTML="<img src='obraz9.jpg'>"
+if(x==a20) x.innerHTML="<img src='obraz10.jpg'>"
+if(jeden.innerHTML==dwa.innerHTML && jeden!=dwa) 
+{jeden.style.visibility="hidden";
+dwa.style.visibility="hidden";
+}
+jeden=0;
+}
+}
+
+var Ident=['a1', 'a2', 'a3','a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11', 'a12', 'a13', 'a14', 'a15', 'a16', 'a17', 'a18', 'a19', 'a20'];
+
+function Mieszaj()
+{
+var l, liczba=0;
+var pLeft=[100,200,300,400,500,600,700,800,900,1000,100,200,300,400,500,600,700,800,900,1000];
+var pTop=[100,100,100,100,100,100,100,100,100,100,200,200,200,200,200,200,200,200,200,200,];
+var Los=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+while(liczba<20)
+{l=Math.floor(Math.random()*20);
+if (Los[l]==0)
+{
+id=document.getElementById(Ident[liczba]);
+id.style.left=pLeft[l];
+id.style.top=pTop[l];
+Los[l]=1;
+liczba++;
+}
+}
+}
+</script>
+
+ 
+<style>
+div
+{
+position: absolute;
+border: 2px;
+solid black; 
+}
+.miniatura
+{
+top:100px;
+width: 100px;
+height:100px;
+}
+.miniatura img
+{
+width: 100px;
+height: 100px;
+}
+
+</style>
+
+
+</head>
+
+
+
+
+<body>
+<input type = "button" value=mieszaj id="okno1" onclick="Mieszaj()">
+<input type = "button" value=ukryj id="okno2" onclick ="ukryj()">
+<div class="miniatura" id="a1" onclick = "Odkryj(this)" style="top:100px; left: 100px"> <img src="obraz1.jpg"></div>
+<div class="miniatura" id="a2" onclick = "Odkryj(this)" style="top:100px; left: 200px"> <img src="obraz2.jpg"></div>
+<div class="miniatura" id="a3" onclick = "Odkryj(this)" style="top:100px; left: 300px"> <img src="obraz3.jpg"></div>
+<div class="miniatura" id="a4" onclick = "Odkryj(this)" style="top:100px; left: 400px"> <img src="obraz4.jpg"></div>
+<div class="miniatura" id="a5" onclick = "Odkryj(this)" style="top:100px; left: 500px"> <img src="obraz5.jpg"></div>
+<div class="miniatura" id="a6" onclick = "Odkryj(this)" style="top:100px; left: 600px"> <img src="obraz6.jpg"></div>
+<div class="miniatura" id="a7" onclick = "Odkryj(this)" style="top:100px; left: 700px"> <img src="obraz7.jpg"></div>
+<div class="miniatura" id="a8" onclick = "Odkryj(this)" style="top:100px; left: 800px"> <img src="obraz8.jpg"></div>
+<div class="miniatura" id="a9" onclick = "Odkryj(this)" style="top:100px; left: 900px"> <img src="obraz9.jpg"></div>
+<div class="miniatura" id="a10" onclick = "Odkryj(this)" style="top:100px; left: 1000px"> <img src="obraz10.jpg"></div>
+<div class="miniatura" id="a11" onclick = "Odkryj(this)" style="top:200px; left: 100px"> <img src="obraz1.jpg"></div>
+<div class="miniatura" id="a12" onclick = "Odkryj(this)" style="top:200px; left: 200px"> <img src="obraz2.jpg"></div>
+<div class="miniatura" id="a13" onclick = "Odkryj(this)" style="top:200px; left: 300px"> <img src="obraz3.jpg"></div>
+<div class="miniatura" id="a14" onclick = "Odkryj(this)" style="top:200px; left: 400px"> <img src="obraz4.jpg"></div>
+<div class="miniatura" id="a15" onclick = "Odkryj(this)" style="top:200px; left: 500px"> <img src="obraz5.jpg"></div>
+<div class="miniatura" id="a16" onclick = "Odkryj(this)" style="top:200px; left: 600px"> <img src="obraz6.jpg"></div>
+<div class="miniatura" id="a17" onclick = "Odkryj(this)" style="top:200px; left: 700px"> <img src="obraz7.jpg"></div>
+<div class="miniatura" id="a18" onclick = "Odkryj(this)" style="top:200px; left: 800px"> <img src="obraz8.jpg"></div>
+<div class="miniatura" id="a19" onclick = "Odkryj(this)" style="top:200px; left: 900px"> <img src="obraz9.jpg"></div>
+<div class="miniatura" id="a20" onclick = "Odkryj(this)" style="top:200px; left: 1000px"> <img src="obraz10.jpg"></div>
+
+
+</body>
+
+
+</html>

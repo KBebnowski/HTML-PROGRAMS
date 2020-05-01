@@ -1,0 +1,66 @@
+<html>
+
+<head> 
+<style>
+
+div{position:absolute; width:100px; height:100px; border:2px solid black;}
+div img{width:100px; height:100px;}
+</style><script>
+var in1="<img src='O.jpg'>", in2="<img src='X.jpg.'>", k=0;
+
+function genGrid()
+{
+var num=3, divIdName, newDiv;
+for(var  i=0; i<num; i++)
+for(var j=0; j<num; j++)
+{
+newDiv=document.createElement('div');
+divIdName='a'+i+j;
+newDiv.setAttribute('id', divIdName);
+newDiv.style.top=100+100*i+'px';
+newDiv.style.left=100+100*j+'px';
+newDiv.addEventListener("click",function(){_3inRow(this);});
+document.body.appendChild(newDiv);
+}
+}
+
+function _3inRow(x)
+{
+if(x.innerHTML==0)
+if (k==0)
+{
+x.innerHTML=in1;
+k=1;
+}
+else
+{
+x.innerHTML=in2;
+k=0;
+}
+if(a11.innerHTML!=0)
+if((a11.innerHTML==a10.innerHTML && a11.innerHTML==a12.innerHTML) || 
+(a11.innerHTML==a01.innerHTML && a11.innerHTML==a21.innerHTML)||
+(a11.innerHTML==a00.innerHTML && a11.innerHTML==a22.innerHTML) ||
+(a02.innerHTML==a11.innerHTML && a11.innerHTML==a20.innerHTML))
+a.innerHTML=a11.innerHTML;
+
+if(a00.innerHTML!=0)
+if((a00.innerHTML==a01.innerHTML && a01.innerHTML==a02.innerHTML) || 
+(a00.innerHTML==a10.innerHTML && a10.innerHTML==a20.innerHTML))
+a.innerHTML=a00.innerHTML;
+
+if(a22.innerHTML!=0)
+if((a22.innerHTML==a12.innerHTML && a02.innerHTML==a12.innerHTML) || 
+(a22.innerHTML==a20.innerHTML && a20.innerHTML==a21.innerHTML))
+a.innerHTML=a22.innerHTML;
+}
+
+</script>
+</head>
+
+
+
+<body onload="genGrid()">
+<div id="a" style="top:500px; left:100px;">
+</div>
+</body>

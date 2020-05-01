@@ -1,0 +1,106 @@
+<html>
+<head><title> Pierwsze zajecia </title>
+<script> 
+function plus()
+{
+kalk.wynik.value=parseFloat(kalk.okno1.value) + parseFloat(kalk.okno2.value);
+}
+function minus()
+{
+kalk.wynik.value=parseFloat(kalk.okno1.value) - parseFloat(kalk.okno2.value);
+}
+function mnozenie()
+{
+kalk.wynik.value=parseFloat(kalk.okno1.value) * parseFloat(kalk.okno2.value);
+}
+function dzielenie()
+{
+kalk.wynik.value=parseFloat(kalk.okno1.value) / parseFloat(kalk.okno2.value);
+}
+
+function Pierwiastek(){kalk.wynik.value=Math.sqrt(parseFloat(kalk.okno1.value));}
+function Potega(){kalk.wynik.value=Math.pow(parseFloat(kalk.okno1.value),parseFloat(kalk.	okno2.value));}
+function Silnia(){
+				 var a=parseFloat(kalk.okno1.value); var s=1; var i=1;
+				 for(i;i<a;i++){
+								s=s*i;
+								}
+							
+				 kalk.wynik.value=s;
+				 }	 
+				 
+function Potega2(){
+				 var a=parseFloat(kalk.okno1.value); var i=1; var s=1;
+				 for(i;i<=a;i++){
+								s=s*2;
+								}
+							
+				 kalk.wynik.value=s;
+				 }	 
+
+
+</script>
+<style>
+#obszar1
+{
+position: absolute;
+top:100px;
+left:100px;
+width: 300px;
+height:100px;
+border: 10px solid blue; 
+padding 10px; 
+margin: 20px;  
+background: darkblue;
+}
+#obszar2
+{
+position: absolute;
+top:220px;
+left:420px;
+width: 300px;
+height:150px;
+border: 10px solid darkgreen; 
+padding 10px; 
+margin: 20px;  
+background: green;
+}
+#obszar3
+{
+position: absolute;
+top:390px;
+left:740px;
+width: 300px;
+height:150px;
+border: 10px solid blue; 
+padding 10px;
+margin: 20px;  
+background: darkblue;
+}
+</style> </head>
+
+<body>
+
+
+
+<form name="kalk" style="position:absolute; top:300px; left:50px;">
+<input type = "text" name="okno1">  <input type = "text" name="okno2"> = <input type = "text" name="wynik"> <br>
+<hr>
+<input type = "button" value="+" onclick="plus()">
+<input type = "button" value="-" onclick="minus()">
+<input type = "button" value="*" onclick="mnozenie()">
+<input type = "button" value="/" onclick="dzielenie()">
+<input type="button" value="sqrt" onClick="Pierwiastek()">
+<input type="button" value="^" onClick="Potega()">
+<input type="button" value="!" onClick="Silnia()">
+<input type="button" value="^2" onClick="Potega2()">
+ <hr>
+
+</div>
+
+</form>
+
+<div id="obszar1"> 
+<div id="obszar2"> <img src="obraz.jpg" width=300px height=150px> </div>
+<div id="obszar3"> obszar3</div>
+</body></html>

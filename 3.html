@@ -1,0 +1,76 @@
+<html>
+<head>
+<script>
+function zmiana(x){
+x.style.width=parametry.p1.value;
+x.style.height=parametry.p2.value;
+x.style.top=parametry.p3.value;
+x.style.left=parametry.p4.value;
+x.style.background=parametry.kolor.value;
+}
+function ZmianaRamki(a)
+{var d=document.getElementById(a);
+d.style.borderWidth=parametry.p5.value;
+d.style.borderStyle=parametry.p6.value;
+d.style.borderColor=parametry.bCol.value;
+}
+
+</script>
+<style>
+#warstwa1
+{
+position: absolute;
+top: 300px;
+left:100px;
+width: 300px;
+height:100px;
+border: 10px solid blue; 
+padding: 10px; 
+margin: 20px;  
+background: darkblue;
+}
+#warstwa2
+{
+position: absolute;
+top:220px;
+left:420px;
+width: 300px;
+height:150px;
+border: 10px solid darkgreen; 
+padding 10px; 
+margin: 20px; 
+background: green;
+</style>
+
+</head>
+<body>
+<div id="warstwa1" onclick="zmiana(this)"></div>
+<div id="warstwa2" onclick="zmiana(this)"></div>
+<form name="parametry">
+width<input type="text" name = "p1"><br>
+height<input type="text" name = "p2"><br>
+top<input type="text" name = "p3"><br>
+left<input type="text" name = "p4"><br>
+background<input list="colors" name="kolor"></br>
+<datalist id="colors">
+<option value="blue"><option value="red"><option value="green"><option value="black"><option value="yellow"><option value="purple"></br>
+</datalist>
+
+borderWidth<input type="text" name = "p5"><br>
+borderStyle<input list="style" name = "p6"><br>
+<datalist id = "style">
+<option value="solid"><option value="dotted"><option value="double">
+</datalist>
+
+<input type="button" value="Ramka1" onclick="ZmianaRamki('warstwa1')";><br>
+<input type="button" value="Ramka2" onclick="ZmianaRamki('warstwa2')";><br>
+
+borderColor<input list="color" name="bCol">
+<datalist id="color">
+<option value="blue"><option value="red"><option value="green"><option value="black"><option value="yellow"><option value="purple">
+</datalist>
+
+
+</form>
+
+</body>
